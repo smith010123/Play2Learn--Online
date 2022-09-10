@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="{% static 'css/ah_final.css' %}">
 <body id="page-top" class=".backgroundimg" style="background-image: url('{% static 'images/hug.jpg' %}');/
 background-repeat: no-repeat;background-size: cover;">
-<main class="container-fluid">{% csrf_token %}
+<main class="container-fluid">
    <div class="text-center">
       <div id="final" class="container-fluid d-none d-md-block offset-md-3">
          <div><h1>Anagram Hunt</h1></div>
@@ -24,7 +24,7 @@ background-repeat: no-repeat;background-size: cover;">
             <div  class="row justify-content-center">
                <a id="button" class="btn btn-default mb-2" href="{% url 'anagramhunt:ah_gameplay' %}">Play Again</a>
                <a id="button" class="btn btn-default mb-2" href="{% url 'anagramhunt:anagramhunt' %}">Back to Start Screen</a>
-               <a id="button" class="btn btn-default" href="{% url 'anagramhunt:gametrackah' %}">Game Tracking</a>
+               <a id="button" class="nav-link" href="{% url 'pages:homepage' %}">Home</a>
             </div>
            </div>
          </div>

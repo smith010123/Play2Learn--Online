@@ -25,10 +25,7 @@
                alert('Please fix form errors.');
             }
             if (form.checkValidity() === true) {
-              to = 'smith010123@gmail.com'
-              from = name, lastname
-              subject = need
-              body = message
+              window.location.assign("{% url 'pages:homepage' %}");
               alert('Form Submitted, Thank you.');
             }
        });

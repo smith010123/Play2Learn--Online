@@ -11,28 +11,15 @@ from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
-from reviews.models import AddReview
 from json import dumps
-
 
 
 class HomePageView(TemplateView):
     template_name = 'pages/home.html'
 
 
-def aboutus(request):
-    try:
-    # create data dictionary
-        obj = str(AddReview.objects.all().values().order_by('-created')[:4])
-        obj1 = str(obj)
-        dataDictionary = {
-        'data' : obj1
-        }
-    # dump data
-        dataJSON = dumps(dataDictionary)
-        return render(request, 'pages/about_us.html', {'data': dataJSON})
-    except:
-        return HttpResponse('Had a issue')
+class AboutUsView(TemplateView):
+    template_name = 'pages/about_us.html'
 
 
 def contact_form(request):

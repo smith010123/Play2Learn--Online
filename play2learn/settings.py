@@ -14,7 +14,7 @@ import environ
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 from pathlib import Path
-#import dj_database_url
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,11 +27,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'SECRET_KEY'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-#DEBUG = False
+#DEBUG = True
+DEBUG = False
 
-#ALLOWED_HOSTS = ['play2learn.herokuapp.com']
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['play2learn--online.herokuapp.com']
+#ALLOWED_HOSTS = ['127.0.0.1']
 
 # Application definition
 
@@ -57,7 +57,7 @@ INSTALLED_APPS = [
     'mathfacts.apps.MathfactsConfig',
     'pages.apps.PagesConfig',
     'users.apps.UsersConfig',
-    'reviews.apps.ReviewsConfig',
+
 ]
 
 SITE_ID = 1
@@ -96,17 +96,17 @@ WSGI_APPLICATION = 'play2learn.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-#DATABASES = { 'default' : dj_database_url.config()}
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'play2learn',
-        'USER': 'postgres',
-        'PASSWORD': 'Kamleon3',
-        'HOST': 'localhost',
-        'PORT': 5432
-    }
-}
+DATABASES = { 'default' : dj_database_url.config()}
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': 'play2learn',
+#        'USER': 'postgres',
+#        'PASSWORD': 'Kamleon3',
+#        'HOST': 'localhost',
+#        'PORT': 5432
+#    }
+#}
 
 # EMAIL
 SENDGRID_API_KEY = os.environ.get('SENDGRID_API_KEY')
