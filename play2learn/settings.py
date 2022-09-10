@@ -183,10 +183,10 @@ USE_TZ = True
 
 # Local Static File Settings
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
-STATIC_URL = 'static/'
-#STATICFILES_DIRS = [
-#    BASE_DIR / 'static',
-#]
+#STATIC_URL = 'static/'
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
 
 #STATIC_ROOT = BASE_DIR / 'staticfiles'
 
