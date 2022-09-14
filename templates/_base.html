@@ -272,8 +272,7 @@
     </nav>
 </header>
 {% block main %}
-<main>
-   <style class=".backgroundimg d-none d-md-block" href="../static/Images/children_playing.jpg"></style>
+<main class=".backgroundimg d-none d-md-block">
    <hr>
    <div id="quote" >
       <p id="quotesection">Quote Section</p>
@@ -316,7 +315,7 @@
     </div>
 </main>
 <!--Mobile-->
-<img src="{% static 'images/children_playing.jpg' %}" class="img-thumbnail d-sm-block d-md-none" type="text/css">
+<img src="../static/images/children_playing.jpg" class="img-thumbnail d-sm-block d-md-none">
 <div id="quoteSmall" class="container d-sm-block d-md-none mt-3">
    <p id="quotesectionSmall" class="quotesectionSmall mt-3">Quote Section</p>
 </div>
