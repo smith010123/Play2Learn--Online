@@ -8,10 +8,8 @@
 <script src="https://kit.fontawesome.com/b02c9a6dba.js"></script>
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet"
   integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<!--<link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css">-->
-<link rel="stylesheet" href="../static/css/main.css">
-<!--<link rel="stylesheet" href="{% static 'Images/children_playing.jpg' %}">-->
-<link rel="stylesheet" href="../static/images/children_playing.jpg">
+<link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'Images/children_playing.jpg' %}" type="image/css">
 {% block javascript %}{% endblock %}
 <title>{% block title %}{% endblock %} | Play2Learn Games</title>
 </head>
@@ -85,7 +83,7 @@
     </div>
 </main>
 <!--Mobile-->
-<img src="{% static 'images/children_playing.jpg' %}" class="img-thumbnail d-sm-block d-md-none">
+<img src="{% static 'images/children_playing.jpg' %}" class="img-thumbnail d-sm-block d-md-none" type="text/css">
 <div id="quoteSmall" class="container d-sm-block d-md-none mt-3">
    <p id="quotesectionSmall" class="quotesectionSmall mt-3">Quote Section</p>
 </div>
