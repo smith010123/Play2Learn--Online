@@ -213,7 +213,7 @@ if os.environ.get('ENVIRONMENT') != 'production':
     from .local_settings import *
 
 
-mimetypes.add_type("text/html", ".css", True)
+mimetypes.add_type("text/css", ".css", True)
 
 
 
