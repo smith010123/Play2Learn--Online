@@ -211,5 +211,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 if os.environ.get('ENVIRONMENT') != 'production':
     from .local_settings import *
 
+import mimetypes
+mimetypes.add_type("text/css", ".css", True)
+
 
 
