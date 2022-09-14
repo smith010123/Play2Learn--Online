@@ -186,13 +186,20 @@ USE_TZ = True
 # Local Static File Settings
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 #STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
+#STATIC_URL = '/static/'
+#STATICFILES_DIRS = [
+#    BASE_DIR / 'static',
+#]
+#BASE_DIR = Path(__file__).resolve().parent.parent
+#STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+#test
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    BASE_DIR / 'static',
-]
-BASE_DIR = Path(__file__).resolve().parent.parent
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-#STATIC_ROOT = BASE_DIR / 'static'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -204,7 +211,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 if os.environ.get('ENVIRONMENT') != 'production':
     from .local_settings import *
 
-# Configure Django App for Heroku.
-import django_heroku
-django_heroku.settings(locals())
+
 
