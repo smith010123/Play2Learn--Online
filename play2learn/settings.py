@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os
-import django_heroku
 import environ
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
@@ -201,10 +200,11 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-django_heroku.settings(locals())
-
 #  BOTTOM OF settings.py
 if os.environ.get('ENVIRONMENT') != 'production':
     from .local_settings import *
 
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())
 
