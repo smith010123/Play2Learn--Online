@@ -257,24 +257,25 @@
               aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
           </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link" href="{% url 'pages:homepage' %}">Home<span class="sr-only">(current)</span></a></li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Games
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{% url 'anagramhunt:anagramhunt' %}">Anagram Hunt</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{% url 'mathfacts:mathfacts' %}">Math Facts Practice</a>
-              </div>
-            </li>
-              <li class="nav-item"><a class="nav-link" href="{% url 'pages:about-us' %}">About</a></li>
-          </ul>
-        </div>
-  </nav>
-</header>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                 <li class="nav-item"><a class="nav-link" href="{% url 'pages:homepage' %}">Home<span class="sr-only">(current)</span></a></li>
+                 <li class="nav-item dropdown">
+                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Games
+                   </a>
+                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                     <a class="dropdown-item" href="{% url 'anagramhunt:anagramhunt' %}">Anagram Hunt</a>
+                     <div class="dropdown-divider"></div>
+                     <a class="dropdown-item" href="{% url 'mathfacts:mathfacts' %}">Math Facts Practice</a>
+                   </div>
+                 </li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'pages:about_us' %}">About</a></li>
+               </ul>
+            </div>
+         </div>
+     </nav>
+ </header>
 {% block main %}
 <main class=".backgroundimg d-none d-md-block">
    <hr>
