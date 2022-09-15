@@ -255,13 +255,6 @@
               <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-             <ul class="navbar-nav ml-auto">
-
-             <li class="nav-item"><a class="nav-link" href="{% url 'account_login' %}">Login</a></li>
-             <li class="nav-item"><a class="nav-link" href="{% url 'account_signup' %}">Sign up</a></li>
-             <li class="nav-item"><a class="nav-link" href="{% url 'pages:about-us' %}">About</a></li>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto">
                  <li class="nav-item"><a class="nav-link" href="{% url 'pages:homepage' %}">Home<span class="sr-only">(current)</span></a></li>
                  <li class="nav-item dropdown">
@@ -270,27 +263,14 @@
                    </a>
                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                      <a class="dropdown-item" href="{% url 'anagramhunt:anagramhunt' %}">Anagram Hunt</a>
-                     <a class="dropdown-item" href="{% url 'mathfacts:mathfacts' %}">Math Facts Practice</a>
                      <div class="dropdown-divider"></div>
+                     <a class="dropdown-item" href="{% url 'mathfacts:mathfacts' %}">Math Facts Practice</a>
                    </div>
                  </li>
-                 <li class="nav-item dropdown">
-                   <a class="nav-link dropdown-toggle" href="{% url 'my-account' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     My Account
-                   </a>
-                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                     <a class="dropdown-item" href="{% url 'my-account' %}">My Account</a>
-                     <a class="dropdown-item" href="{% url 'reviews:reviews' %}">Reviews</a>
-                   </div>
-                 </li>
-                 <li class="nav-item"><a class="nav-link" href="{% url 'pages:about-us' %}">About</a></li>
-
-                   <li class="nav-item">
-                     <a class="nav-link" href="/admin/">Admin</a>
-                   </li>
-
-              </ul>
-          </div>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'pages:about_us' %}">About</a></li>
+               </ul>
+            </div>
+         </div>
      </nav>
  </header>
 {% block main %}
