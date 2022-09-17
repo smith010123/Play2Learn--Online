@@ -23,11 +23,11 @@
     #container {
       height: auto;
     }
-    .navbar-collapse {
-      max-height: 280px;
-      overflow-y: auto;
-    }
-
+    @media (min-width: 992px) {
+      nav.navbar.fixed-top {
+          overflow-y: visible;
+      }
+  }
     nav {
       background: rgba(232, 232, 232, 0.8);
       width: 100%;
