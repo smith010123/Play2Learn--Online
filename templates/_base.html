@@ -245,7 +245,7 @@
    <title>{% block title %}{% endblock %} | Play2Learn Games</title>
    </head>
    <body>
-   <header>
+   <!--<header>
       <nav class="navbar navbar-expand-lg navbar-light">
          <h3><a href="{% url 'pages:homepage' %}">Play2Learn Games&trade;</a></h3>
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
@@ -271,6 +271,32 @@
                    </li>
                 </ul>
             </div>
+       </nav>
+   </header>-->
+   <header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+         <h3><a href="{% url 'pages:homepage' %}">Play2Learn Games&trade;</a></h3>
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-expanded="false"
+                aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                   <li class="nav-item active"><a class="nav-link" href="{% url 'pages:homepage' %}">Home<span class="sr-only">(current)</span></a></li>
+                   <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       Games
+                     </a>
+                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                       <a class="dropdown-item" href="{% url 'anagramhunt:anagramhunt' %}">Anagram Hunt</a>
+                       <div class="dropdown-divider"></div>
+                       <a class="dropdown-item" href="{% url 'mathfacts:mathfacts' %}">Math Facts Practice</a>
+                     </div>
+                   </li>
+                      <li class="nav-item"><a class="nav-link" href="{% url 'pages:about_us' %}">About</a></li>
+                 </ul>
+           </div>
        </nav>
    </header>
    {% block main %}
@@ -320,7 +346,7 @@
    <div id="quoteSmall" class="container d-sm-block d-md-none mt-3">
       <p id="quotesectionSmall" class="quotesectionSmall mt-3">Quote Section</p>
    </div>
-    <div id="backgroundM" class="container-fluid d-md-block d-lg-none">
+    <div id="backgroundM" class="container-fluid d-md-none">
        <div id="container1" class="row d-sm-block d-md-none">
          <div id="smallScreen1" class="container-fluid d-md-block d-lg-none">
            <h3>Anagram Hunt</h3>
