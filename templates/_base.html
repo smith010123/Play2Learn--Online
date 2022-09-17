@@ -249,7 +249,7 @@
    <body>
    <header>
       <nav class="navbar navbar-expand-lg navbar-light">
-         <h1><a href="{% url 'pages:homepage' %}">Play2Learn Games&trade;</a></h1>
+         <h3><a href="{% url 'pages:homepage' %}">Play2Learn Games&trade;</a></h3>
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
                 data-target="#navbarSupportedContent" aria-expanded="false"
                 aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
@@ -257,11 +257,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                <ul class="navbar-nav ml-auto">
-            {% if not user.is_authenticated %}
-               <li class="nav-item"><a class="nav-link" href="{% url 'account_login' %}">Login</a></li>
-               <li class="nav-item"><a class="nav-link" href="{% url 'account_signup' %}">Sign up</a></li>
                <li class="nav-item"><a class="nav-link" href="{% url 'pages:about-us' %}">About</a></li>
-             {% else %}
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                    <li class="nav-item"><a class="nav-link" href="{% url 'pages:homepage' %}">Home<span class="sr-only">(current)</span></a></li>
@@ -271,30 +267,10 @@
                      </a>
                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                        <a class="dropdown-item" href="{% url 'anagramhunt:anagramhunt' %}">Anagram Hunt</a>
-                       <a class="dropdown-item" href="{% url 'mathfacts:mathfacts' %}">Math Facts Practice</a>
                        <div class="dropdown-divider"></div>
+                       <a class="dropdown-item" href="{% url 'mathfacts:mathfacts' %}">Math Facts Practice</a>
                      </div>
                    </li>
-                   <li class="nav-item dropdown">
-                     <a class="nav-link dropdown-toggle" href="{% url 'my-account' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                       My Account
-                     </a>
-                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                       <a class="dropdown-item" href="{% url 'my-account' %}">My Account</a>
-                       <a class="dropdown-item" href="{% url 'reviews:reviews' %}">Reviews</a>
-                       <form method="post" action="{% url 'account_logout' %}">
-                         {% csrf_token %}
-                         <button class="btn dropdown-item">Log out</button>
-                         </form>
-                     </div>
-                   </li>
-                   <li class="nav-item"><a class="nav-link" href="{% url 'pages:about-us' %}">About</a></li>
-               {% endif %}
-               {% if user.is_staff %}
-                     <li class="nav-item">
-                       <a class="nav-link" href="/admin/">Admin</a>
-                     </li>
-               {% endif %}
                 </ul>
             </div>
        </nav>
