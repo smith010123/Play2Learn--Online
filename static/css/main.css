@@ -146,7 +146,7 @@ body, html {
    background: rgba(232, 232, 232, 0.65);
    background-position: center;
    text-align: center;
-   width: 96%;
+   width: 100%;
    position: relative;
    box-sizing: border-box;
    padding-top: 1rem;
