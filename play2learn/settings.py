@@ -185,8 +185,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 # Local Static File Settings
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
-#STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
+#STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
