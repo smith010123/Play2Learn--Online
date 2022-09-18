@@ -214,6 +214,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 mimetypes.add_type("text/css", ".css", True)
+mimetypes.add_type("image/jpeg", ".image", True)
 
 
 
