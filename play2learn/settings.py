@@ -197,7 +197,7 @@ STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 #test
 #BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-#STATIC_URL = '/static/'
+STATIC_URL = '/static/'
 #STATICFILES_DIRS = [
 #    BASE_DIR / 'static',
 #]
@@ -209,7 +209,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 ##  BOTTOM OF settings.py
-from local_settings import *
+#from .local_settings import *
 
 
 mimetypes.add_type("text/css", ".css", True)
