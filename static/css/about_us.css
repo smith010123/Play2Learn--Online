@@ -9,6 +9,7 @@ body, html {
   padding: 1rem 1rem 1rem 1rem;
   font-size: small;
   margin: 0%;
+  width: 100%;
 }
 #containerUs {
   width: 100%;
