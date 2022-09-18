@@ -208,7 +208,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'live-static', 'static-root')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-##  BOTTOM OF settings.py
+#  BOTTOM OF settings.py
 #from .local_settings import *
 
 
