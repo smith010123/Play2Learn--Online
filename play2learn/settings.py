@@ -32,7 +32,7 @@ DEBUG = True
 #DEBUG = False
 
 ALLOWED_HOSTS = ['play2learn-online.herokuapp.com']
-ALLOWED_HOSTS = ['127.0.0.1']
+#ALLOWED_HOSTS = ['127.0.0.1']
 
 # Application definition
 
