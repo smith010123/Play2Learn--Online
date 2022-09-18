@@ -66,7 +66,7 @@ SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    #"whitenoise.middleware.WhiteNoiseMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -187,20 +187,20 @@ USE_TZ = True
 # Local Static File Settings
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 #STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
-#STATIC_URL = '/static/'
-#STATICFILES_DIRS = [
-#    BASE_DIR / 'static',
-#]
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 #BASE_DIR = Path(__file__).resolve().parent.parent
 #STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 #test
 #BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    BASE_DIR / 'static',
-]
+STATIC_ROOT = os.path.join(BASE_DIR, 'live-static', 'static-root')
+#STATIC_URL = '/static/'
+#STATICFILES_DIRS = [
+#    BASE_DIR / 'static',
+#]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
