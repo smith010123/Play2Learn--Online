@@ -6,13 +6,15 @@ body, html {
 }
 #quote{
   background: rgba(232, 232, 232, 0.863);
-  padding: 2rem 3rem 3rem 3rem;
+  padding: 1rem 1rem 1rem 1rem;
+  font-size: small;
+  margin: 0%;
 }
 #containerUs {
   width: 100%;
   display: block;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 10%;
+  padding-right: 10%;
   padding-top: 3rem;
   padding-bottom: 3rem;
   box-sizing: border-box;
@@ -22,11 +24,11 @@ body, html {
   background-position: center;
   position: relative;
   text-align: center;
-  width: 96%;
+  width: 100%;
   position: relative;
   box-sizing: border-box;
   border-style: solid;
   margin-top: 20%;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: 0;
+  margin-right: 0;
 }
