@@ -95,8 +95,8 @@ body, html {
    height: 8rem;
    position: relative;
    box-sizing: border-box;
-   margin-top: 1rem;
-   margin-bottom: 1rem;
+   margin-top: .5rem;
+   margin-bottom: .5rem;
    font-size: large;
    padding: 1rem .5rem .5rem .5rem;
    border-style: solid;
@@ -149,8 +149,8 @@ body, html {
    width: 100%;
    position: relative;
    box-sizing: border-box;
-   padding-top: 1rem;
-   padding-bottom: 1rem;
+   padding-top: .5rem;
+   padding-bottom: .5rem;
    font-size: large;
    border-style: solid;
    margin-bottom: 0;
