@@ -16,8 +16,8 @@ body, html {
   display: block;
   padding-left: 10%;
   padding-right: 10%;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   box-sizing: border-box;
 }
 #backgroundUs {
@@ -26,6 +26,7 @@ body, html {
   position: relative;
   text-align: center;
   width: 100%;
+  height: 40%;
   position: relative;
   box-sizing: border-box;
   border-style: solid;
