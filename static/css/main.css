@@ -150,10 +150,10 @@ body, html {
    position: relative;
    box-sizing: border-box;
    padding-top: 1rem;
-   padding-bottom: 1rem;
+   padding-bottom: 3rem;
    font-size: large;
    border-style: solid;
-   margin-bottom: 3rem;
+   margin-bottom: 0;
  }
  .button-link {
    background-color: black;
