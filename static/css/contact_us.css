@@ -2,6 +2,9 @@ body, html {
     background-image: none;
     background-color: white;
     overflow: auto!important;
+    max-height: 100% !important;
+    width: 100%;
+    height: 100%;
     }
     #contactButton {
     width: 90px;
