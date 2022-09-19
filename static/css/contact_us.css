@@ -2,7 +2,8 @@ body, html {
     background-image: none;
     background-color: white;
     overflow: auto!important;
-
+    margin: 0%;
+    padding: 0%;
     }
     #contactButton {
     width: 90px;
