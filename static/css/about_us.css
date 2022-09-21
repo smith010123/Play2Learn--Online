@@ -1,8 +1,10 @@
 body, html {
   height: 100%;
-  background-image: none;
   background-color: white;
   overflow:auto;
+}
+main {
+  height: 700px;
 }
 #quote{
   background: rgba(232, 232, 232, 0.863);
