@@ -40,6 +40,7 @@ main {
   width: 100%;
   display: block;
   box-sizing: border-box;
+  padding-top: 1rem;
 
 }
 
