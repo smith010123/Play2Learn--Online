@@ -81,14 +81,14 @@ body, html{
    background: rgba(232, 232, 232, 0.65);
    background-position: center;
    text-align: center;
-   width: 99%;
+   width: 97%;
    height: 20%;
    position: relative;
    box-sizing: border-box;
    padding: 3rem;
    font-size: large;
    border-style: solid;
-   margin: 1rem 1rem 1rem 1rem;
+   margin: 1rem 0rem 1rem 1rem;
  }
  #quoteSmall {
    background: rgba(232, 232, 232, 0.65);
@@ -134,7 +134,7 @@ body, html{
   background: rgba(232, 232, 232, 0.65);
   background-position: center;
   text-align: center;
-  width: 99%;
+  width: 97%;
   position: relative;
   box-sizing: border-box;
   padding-top: 2rem;
