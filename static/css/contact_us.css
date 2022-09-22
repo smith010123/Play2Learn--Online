@@ -2,8 +2,7 @@ body, html {
   height: 100%;
   background-image: none;
   background-color: white;
-  overflow:auto;
-  width: 100%;
+  overflow-x: hidden;
 
     }
     #shape {
