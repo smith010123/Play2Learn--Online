@@ -88,7 +88,7 @@ body, html{
    padding: 3rem;
    font-size: large;
    border-style: solid;
-   margin: 1rem;
+   margin: 1rem 1rem 1rem 1rem;
  }
  #quoteSmall {
    background: rgba(232, 232, 232, 0.65);
