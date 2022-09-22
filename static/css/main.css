@@ -1,9 +1,11 @@
-body, html {
+body, html{
    margin: 0%;
    padding: 0%;
    overflow: auto;
  }
-
+ #image {
+  margin-top: -1rem !important;
+}
  #backgroundImage {
    height: 702px;
  }
@@ -14,7 +16,8 @@ body, html {
    background-repeat: no-repeat;
    max-width: 100%;
    height: auto;
-
+   line-height: 0%;
+   vertical-align: bottom;
  }
  #container {
    height: auto;
@@ -71,7 +74,7 @@ body, html {
  }
  main {
    box-sizing:border-box;
-   height: 760px;
+   height: 818px;
    position: relative;
  }
  #quote {
