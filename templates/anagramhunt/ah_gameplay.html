@@ -629,8 +629,8 @@ function checkAnswer() {
 
      }
 window.addEventListener('load', function() {
-   const answer = document.getElementById('entry');
-   const answer2 = document.getElementById('entry2');
+   const answer = document.getElementById('entry').focus();
+   const answer2 = document.getElementById('entry2').focus();
    const time = document.getElementById('time');
    const time2 = document.getElementById('time2');
    const score = document.getElementById('score');
@@ -651,36 +651,6 @@ window.addEventListener('load', function() {
 });
 </script>
 {% endblock %}
-<style>
-   body, html {
-      margin: 0%;
-      padding: 0%;
-      overflow: auto!important;
-      min-height: 100%;
-    }
-  #scoreboard {
-    background: rgba(232, 232, 232, .80);
-    background-position: center;
-    width: 40%;
-    height: 90%;
-    box-sizing: border-box;
-    margin-top: 8rem;
-    padding: 1rem;
-    border-style: solid;
-    }
-    #scoreboard2 {
-      background: rgba(232, 232, 232, .80);
-      background-position: center;
-      width: 80%;
-      height: 95%;
-      position: relative;
-      box-sizing: border-box;
-      margin-top: 1rem;
-      margin: auto;
-      border-style: solid;
-      text-align: center;
-    }
-   </style>
 {% block main %}
 <link rel="stylesheet" href="{% static 'css/ah_gameplay.css' %}">
 <body class=".backgroundimg" style="background-image: url('{% static 'Images/blocks.webp' %}');">

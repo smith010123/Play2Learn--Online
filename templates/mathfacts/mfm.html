@@ -153,50 +153,6 @@ window.addEventListener('load', function() {
   const display2 = document.getElementById('display2');
   const stage = document.getElementById('stage');
   const stage2 = document.getElementById('stage2');
-  const btn0 = document.getElementById('0');
-  const btn1 = document.getElementById('1');
-  const btn2 = document.getElementById('2');
-  const btn3 = document.getElementById('3');
-  const btn4 = document.getElementById('4');
-  const btn5 = document.getElementById('5');
-  const btn6 = document.getElementById('6');
-  const btn7 = document.getElementById('7');
-  const btn8 = document.getElementById('8');
-  const btn9 = document.getElementById('9');
-  const btnClear = document.getElementById('clear');
-  btn0.addEventListener('click', btnValue);
-  btn1.addEventListener('click', btnValue);
-  btn2.addEventListener('click', btnValue);
-  btn3.addEventListener('click', btnValue);
-  btn4.addEventListener('click', btnValue);
-  btn5.addEventListener('click', btnValue);
-  btn6.addEventListener('click', btnValue);
-  btn7.addEventListener('click', btnValue);
-  btn8.addEventListener('click', btnValue);
-  btn9.addEventListener('click', btnValue);
-  btnClear.addEventListener('click', btnValue);
-  const btn0m = document.getElementById('0m');
-  const btn1m = document.getElementById('1m');
-  const btn2m = document.getElementById('2m');
-  const btn3m = document.getElementById('3m');
-  const btn4m = document.getElementById('4m');
-  const btn5m = document.getElementById('5m');
-  const btn6m = document.getElementById('6m');
-  const btn7m = document.getElementById('7m');
-  const btn8m = document.getElementById('8m');
-  const btn9m = document.getElementById('9m');
-  const btnCm = document.getElementById('cm');
-  btn0m.addEventListener('click', btnValue2);
-  btn1m.addEventListener('click', btnValue2);
-  btn2m.addEventListener('click', btnValue2);
-  btn3m.addEventListener('click', btnValue2);
-  btn4m.addEventListener('click', btnValue2);
-  btn5m.addEventListener('click', btnValue2);
-  btn6m.addEventListener('click', btnValue2);
-  btn7m.addEventListener('click', btnValue2);
-  btn8m.addEventListener('click', btnValue2);
-  btn9m.addEventListener('click', btnValue2);
-  btnCm.addEventListener('click', btnValue2);
   document.addEventListener("keypress", function(e) {
   if (e.keyCode === 13) {
     event.preventDefault();
@@ -210,82 +166,49 @@ window.addEventListener('load', function() {
 {% endblock %}
 <link rel="stylesheet" href="{% static 'css/mfm.css' %}">
 <body id="page-top" class=".backgroundimg" style="background-image: url('{% static 'Images/blackboard.jpg' %}');">
-<main class="d-none d-lg-block">
-  <div id=containMath class="mt-5">
-     <form id="formMath" class="container-fluid justify-content-center" novalidate>
-        <h1 id=math>Math Facts Practice</h1>
-        <h3>Multiplication</h3>
-        <P id="stage"></P>
-           <p id="display"> Equation</p>
-           <input id="entry" placeholder="answer">
-              <div id="calcShape" class="container-fluid">
-                 <div id="containButtons">
-                    <div class="buttons" id="buttons">
-                    <button type="button" id="1" >1</button>
-                    <button type="button" id="2" >2</button>
-                    <button type="button" id="3" >3</button>
-
-                    <button type="button" id="4" >4</button>
-                    <button type="button" id="5" >5</button>
-                    <button type="button" id="6" >6</button>
-
-                    <button type="button" id="7" >7</button>
-                    <button type="button" id="8" >8</button>
-                    <button type="button" id="9" >9</button>
-
-                    <button type="button" id="0" >0</button>
-                    <button type="button" id="clear" >CLEAR</button>
-                    </div>
-                 </div>
-              </div>
-        <div id="scoreBlock" class="row justify-content-center mt-2"><label for="entry">Score: </label>
-        <p id="score" class="ml-2"></p></div><br>
-        <div id=timeBlock class="row justify-content-center"><label for="entry">Time:</label>
-        <p id="time" class="ml-2"></p></div>
-     </form>
-  </div>
-</main>
-</div>
-<!--Mobile size viewport-->
-<div id="formMath4" class="container-fluid d-lg-none d-md-block">
-  <div id="formMath4" class="container-fluid">
-    <div id="formMath2" class="mt-1">
-      <form class="container justify-content-center" novalidate>
-        <h4 id="math2">Math Facts Practice</h4>
-        <h5>Multiplication</h5>
-          <P id="stage2"></p>
-            <p id="display2" class="row justify-content-center"> Equation</p>
-            <div class="row justify-content-center">
-           <input id="entry2" placeholder="answer">
-            </div>
-           <div id="calcShape2" class="container-fluid">
-              <div id="containButtons2">
-                <div class="buttons2" id="buttons2">
-                 <button type="button" id="1m" >1</button>
-                 <button type="button" id="2m" >2</button>
-                 <button type="button" id="3m" >3</button>
-
-                 <button type="button" id="4m" >4</button>
-                 <button type="button" id="5m" >5</button>
-                 <button type="button" id="6m" >6</button>
-
-                 <button type="button" id="7m" >7</button>
-                 <button type="button" id="8m" >8</button>
-                 <button type="button" id="9m" >9</button>
-
-                 <button type="button" id="0m" >0</button>
-                 <button type="button" id="cm" >CLEAR</button>
-                </div>
-              </div>
+  <main class="d-none d-lg-block">
+    <div id=containMath class="mt-5">
+       <div id="formMath" class="container-fluid justify-content-center">
+          <h1 id="math" class="mt-5">Math Facts Practice</h1>
+          <h3>Addition</h3>
+          <div id="scoreBlock" class="row justify-content-center mt-4">
+           <label for="entry">Score:</label><p class="ml-2 mr-5 font-weight-bold" id="score" ></p>
+           <label for="entry">Time:</label><p class="ml-2 mb-4" id="time" ></p>
+          </div>
+           <hr>
+           <div class="row justify-content-center">
+              <P id="stage"></P>
+              <p id="display" class="mt-3"> Equation</p><br>
            </div>
-        <div id="scoreBlock2" class="row justify-content-center mt-1"><label for="entry">Score: </label>
-        <p id="score2" class="ml-3"></p></div>
-        <div id="timeBlock2" class="row justify-content-center"><label for="entry">Time:</label>
-        <p id="time2" class="ml-3"></p></div>
-      </form>
-   </div>
+           <div class="row justify-content-center mt-5">
+             <input id="entry" placeholder="answer" type="tel" maxlength="6"/>
+           </div>
+        </div>
+    </div>
+ </main>
+</div>
+ <!--Mobile size viewport-->
+ <div id="formMath4" class="container-fluid d-lg-none d-md-block">
+  <div id="formMath2" class="mt-5">
+     <div class="container justify-content-center">
+        <h1 id="math" class="mt-3">Math Facts Practice</h1>
+        <h5>Addition</h5>
+        <div id="scoreBlock2" class="row justify-content-center mt-4">
+         <label for="entry2">Score:</label><p class="ml-2 mr-5 font-weight-bold" id="score"2 ></p>
+         <label for="entry2">Time:</label><p class="ml-2 mb-4" id="time2" ></p>
+        </div>
+         <hr>
+         <div class="row justify-content-center">
+            <P id="stage2"></P>
+            <p id="display2" class="mt-3"> Equation</p><br>
+         </div>
+         <div class="row justify-content-center mt-5">
+           <input id="entry2" placeholder="answer" type="tel" maxlength="6"/>
+         </div>
+      </div>
   </div>
 </div>
 </div>
+</body>
 
 {% endblock %}

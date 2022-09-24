@@ -3,13 +3,12 @@ window.addEventListener('load', function() {
    addScoreM = sessionStorage.getItem("addScoreM");
    op = sessionStorage.getItem("op");
 
+
    if (isNaN(addScore)) {
       let score = 0;
       score.innerText = addScore;
       let op = sessionStorage.getItem("op");
       let opFin = document.getElementById('op');
-      opFin.innerText = op;
-      console.log(op)
       opFin.innerText = op;
    } else {
          let score = document.getElementById('score');
@@ -22,16 +21,15 @@ window.addEventListener('load', function() {
    if (isNaN(addScoreM)) {
       let scoreM = 0;
       scoreM.innerText = addScoreM;
-      let opM = sessionStorage.getItem("op");
-      let opFinM = document.getElementById('op');
-      opFinM.innerText = opM;
-      opFinM.innerText = opM;
+      opM = sessionStorage.getItem("opM");
+      let opFinM = document.getElementById('opM');
+      opFinM.innerText = op;
    } else {
          let scoreM = document.getElementById('scoreM');
-         scoreM.innerText = addScore;
-         let opM = sessionStorage.getItem("op");
-         let opFinM = document.getElementById('op');
-         opFinM.innerText = opM;
+         scoreM.innerText = addScoreM;
+         opM = sessionStorage.getItem("opM");
+         let opFinM = document.getElementById('opM');
+         opFinM.innerText = op;
       }
 
    });
