@@ -30,7 +30,8 @@
       if(playGame === 'false') {
          clearInterval(timer);
       }
-      function timeKeep() {
+   }
+   function timeKeep() {
          if (stopClock < '30') {
             stopClock = stopClock + 1;
             let time = document.getElementById('time');
@@ -54,10 +55,10 @@
             endGame()
          }
      }
-   }
+
    function checkEntry() {
-   val1 = entry.value;
-   val2 = entry2.value;
+   val1 = document.getElementById("entry").value;
+   val2 = document.getElementById("entry2").value;
       if(val2 == solution || formVal == solution){
          entry2.value = val2;
          keepScore = keepScore + 1;
@@ -106,47 +107,6 @@
       sessionStorage.setItem("op", opM);
       window.location.assign("{% url 'mathfacts:final' %}");
    }
-   function btnValue(e) {
-      if (e.currentTarget.id === 'clear') {
-         val1 = '';
-         val01 = '';
-         formVal = '';
-         entry.value = '';
-         i = '';
-      }
-      else if (i === ''){
-         val1 = e.currentTarget.id;
-         entry.value = val1;
-         i++
-      }
-      else if (i === 1){
-         val01 = e.currentTarget.id;
-         formVal = val1.concat(val01);
-         entry.value = formVal;
-         i = '';
-      }
-   }
-   function btnValue2(e) {
-      currentTarget = String(e.currentTarget.id.slice(0,1))
-      if (currentTarget === 'c'){
-         val1 = '';
-         val01 = '';
-         formVal = '';
-         entry2.value = '';
-         j = '';
-      }
-      else if (j === ''){
-         val1 = currentTarget;
-         entry2.value = val1;
-         j++
-      }
-      else if (j === 1){
-         val01 = currentTarget;
-         formVal = val1.concat(val01);
-         entry2.value = formVal;
-         j = '';
-      }
-   }
    window.addEventListener('load', function() {
      const answer = document.getElementById('entry').focus();
      const answer2 = document.getElementById('entry2').focus();
@@ -186,7 +146,7 @@
                   <p id="display" class="mt-3"> Equation</p><br>
                </div>
                <div class="row justify-content-center mt-5">
-                 <input id="entry" placeholder="answer">
+                 <input id="entry" placeholder="answer" type="tel" maxlength="2"/>
                </div>
             </div>
         </div>
@@ -199,7 +159,7 @@
             <h1 id="math" class="mt-3">Math Facts Practice</h1>
             <h5>Addition</h5>
             <div id="scoreBlock2" class="row justify-content-center mt-4">
-             <label for="entry2">Score:</label><p class="ml-2 mr-5 font-weight-bold" id="score"2 ></p>
+             <label for="entry2">Score:</label><p class="ml-2 mr-5 font-weight-bold" id="score2" ></p>
              <label for="entry2">Time:</label><p class="ml-2 mb-4" id="time2" ></p>
             </div>
              <hr>
@@ -208,7 +168,7 @@
                 <p id="display2" class="mt-3"> Equation</p><br>
              </div>
              <div class="row justify-content-center mt-5">
-               <input id="entry2" placeholder="answer">
+               <input id="entry2" placeholder="answer" type="tel" maxlength="2"/>
              </div>
           </div>
       </div>
