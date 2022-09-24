@@ -580,8 +580,8 @@ function stopGame() {
    location.assign("{% url 'anagramhunt:ah_final' %}");
 }
 function checkAnswer() {
-   userAnswer = document.getElementById("entry").value.toLowerCase()
-   userAnswer2 = document.getElementById("entry2").value.toLowerCase()
+   userAnswer = document.getElementById("entry").value.toLowerCase().trim();
+   userAnswer2 = document.getElementById("entry2").value.toLowerCase().trim();
    guessedWord.push(anagram);
      if (!guessedWord.includes(userAnswer)) {
         if (currentArray.includes(userAnswer)) {
