@@ -19,6 +19,11 @@ body, html{
    line-height: 0%;
    vertical-align: bottom;
  }
+ main {
+  box-sizing:border-box;
+  height: 818px;
+  position: relative;
+}
  #container {
    height: auto;
  }
@@ -71,11 +76,6 @@ body, html{
  #thumbnail {
    display: block;
 
- }
- main {
-   box-sizing:border-box;
-   height: 818px;
-   position: relative;
  }
  #quote {
    background: rgba(232, 232, 232, 0.65);
@@ -142,6 +142,7 @@ body, html{
   font-size: large;
   border-style: solid;
   margin: 12rem 1rem 1rem 1rem;
+
 }
  #backgroundM {
    height: 45%;
